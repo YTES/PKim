@@ -9,4 +9,4 @@ double click the .exe file
 
 you will need to input a string as keywords for searching
 
-a text file named wcrawler_r.txt will be created after the search finishes.
+a text file named results.txt will be created after the search finishes.
