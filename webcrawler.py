@@ -26,18 +26,18 @@ while (sta<=500):
 	soup = BeautifulSoup(data, 'html.parser')
 	items = soup.select('h3.gs_rt > a')
 	for i in items:
-		f.write(str(count)+"\n")
+		f.write(str(count)+")")
 		b_text=bytes(i.text,'cp950','ignore') 
 		f.write("Title: "+str(b_text,'cp950','ignore')+"\n")
-		f.write("URL: "+i.get('href')+"\n\n")
+		#f.write("URL: "+i.get('href')+"\n\n")
 		count=count+1
 	sta=sta+10
 	num=1
-	for num in range(1,10):
-		time.sleep(2)
-		print(".")
+	for num in range(1,11):
+		print(".",end="")
+		time.sleep(1)			
 		num=num+1
-	ynprompt=input('Do youu want to get the results from the Next page?[y/n]')
+	ynprompt=input('\nDo you want to get the results from the Next page?[y/n]')
 	if (ynprompt=='y'):
 		continue
 	else:
